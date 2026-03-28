@@ -17,6 +17,7 @@ function mostrar() {
         lista.innerHTML += `
         <li>
             ${user}
+            <button onclick="actualizar(${index})">Actualizar</button>
             <button onclick="eliminar(${index})">Eliminar</button>
         </li>`;
     });
@@ -25,4 +26,13 @@ function mostrar() {
 function eliminar(index) {
     usuarios.splice(index,1);
     mostrar();
+}
+
+function actualizar(index) {
+    const nuevoNombre = prompt("Nuevo nombre:");
+
+    if(nuevoNombre !== null && nuevoNombre !== ""){
+        usuarios[index] = nuevoNombre;
+        mostrar();
+    }
 }
