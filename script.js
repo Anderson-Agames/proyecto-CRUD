@@ -21,6 +21,8 @@ function mostrar() {
             <button onclick="eliminar(${index})">Eliminar</button>
         </li>`;
     });
+
+    document.getElementById("totalUsuarios").textContent = usuarios.length;
 }
 
 function eliminar(index) {
@@ -36,3 +38,5 @@ function actualizar(index) {
         mostrar();
     }
 }
+
+mostrar();
