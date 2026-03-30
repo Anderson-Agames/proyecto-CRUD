@@ -20,9 +20,13 @@ function mostrar() {
             <button onclick="eliminar(${index})">Eliminar</button>
         </li>`;
     });
+
+    document.getElementById("totalUsuarios").textContent = usuarios.length;
 }
 
 function eliminar(index) {
     usuarios.splice(index,1);
     mostrar();
 }
+
+mostrar();
