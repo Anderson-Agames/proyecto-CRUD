@@ -2,8 +2,7 @@ let usuarios = [];
 
 function agregar() {
     const nombre = document.getElementById("nombre").value.trim();
-
-    // HOTFIX: validar longitud del nombre
+  
     if(nombre.length < 3){
         alert("El nombre debe tener al menos 3 caracteres");
         return;
